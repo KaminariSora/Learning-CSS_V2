@@ -12,12 +12,12 @@
         <img src="Image/IMG_1012.PNG" class="img">
     </header>
     <div class="wrapper">
-        <div class="form-box">
+        <div class="form-box login">
             <h2>Welcome</h2>
             <h5>We are glad to see you back with us</h5>
             <nav class="navigation">
-                <a href="#">Sign In</a>
-                <a href="#">Sign Up</a>
+                <button class="btn btn-1 active">Sign In</button>
+                <button class="btn btn-2">Sign Up</button>
             </nav>
             <form action="#">
                 <div class="input-box">
@@ -33,6 +33,35 @@
                 </div>
             </form>
         </div>
+        <div class="form-box registration">
+            <h2>Welcome</h2>
+            <h5>We are glad to see you back with us</h5>
+            <nav class="navigation">
+                <button class="btn btn-3">Sign In</button>
+                <button class="btn btn-4 active">Sign Up</button>
+            </nav>
+            <form action="#">
+                <div class="input-box">
+                    <input type="email" required>
+                    <label><i class="fa-solid fa-user"></i> Username</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label><i class="fa-solid fa-lock"></i> Password</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label class="confirm-pass"><i class="fa-solid fa-lock"></i> Confirm Password</label>
+                </div>
+                <div class="submit-btn">
+                    <button type="submit" class="btn">Login</button>
+                </div>
+            </form>
+        </div>
     </div>
+    <div class="how">
+        <h1>How to use</h1>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

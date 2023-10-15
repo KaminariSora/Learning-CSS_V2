@@ -1,3 +1,7 @@
+:root {
+    --transition: transform .5s ease;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +15,11 @@ body {
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    /* background: yellow; */
+    background-color: rgba(244,211,94);
+    background-image: url('Image/IMG_1004\ \(1\).GIF');
+    background-size: cover; /* Adjust this as needed */
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .img {
@@ -21,18 +29,59 @@ body {
 }
 
 .wrapper {
+    position: relative;
     width: 400px;
     height: 440px;
-    /* background: rgb(255, 166, 0); */
-    border: 1px solid black;
+    background: rgb(238, 150, 075);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    transition: height .5s ease;
+}
+
+.wrapper.active {
+    height: 500px;
 }
 
 .wrapper .form-box {
     width: 100%;
     padding: 40px;
+}
+
+.wrapper .form-box.login {
+    transition: var(--transition);
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.registration {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.registration {
+    transition: var(--transition);
+    transform: translateX(0);
+}
+
+.wrapper .form-box.registration h2 {
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.wrapper .form-box.registration h5 {
+    font-size: 0.9em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 0;
 }
 
 .form-box h2 {
@@ -49,7 +98,11 @@ body {
     margin-bottom: 30px;
 }
 
-.navigation a{
+.navigation {
+    display: flex;
+}
+
+.navigation .btn{
     color: #333;
     position: relative;
     font-size: 2em;
@@ -58,22 +111,19 @@ body {
     margin-left: 20px;
     text-align: center;
     text-transform: uppercase;
+    width: 50%;
+    background: none;
 }
 
-.navigation a::after {
+.navigation .btn.active::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: -6px;
-    width: 100px;
+    width: 120px;
     height: 3px;
     background: #333;
-    transform: scaleX(0);
     transition: transform .5s;
-}
-
-.navigation a:hover:after {
-    transform: scaleX(1);
 }
 
 .input-box {
@@ -82,12 +132,27 @@ body {
     height: 50px;
     margin: 30px 0px;
     background: #fff;
+    border-radius: 15px;
+}
+
+.input-box input {
+    border: none;
 }
 
 .input-box label {
     position: absolute;
     top: 30%;
     left: 50px;
+    transform: translate(-50%);
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box label.confirm-pass {
+    position: absolute;
+    top: 30%;
+    left: 80px;
     transform: translate(-50%);
     font-size: 1em;
     pointer-events: none;
@@ -117,4 +182,9 @@ body {
     font-size: 1em;
     font-weight: bold;
     color: #fff;
+}
+
+.how {
+    margin-top: 30px;
+    color: #333;
 }
