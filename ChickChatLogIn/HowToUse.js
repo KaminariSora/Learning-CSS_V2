@@ -1,3 +1,5 @@
+const backButton = document.querySelector(".back");
+
 const initSlider = () => {
     const imageList= document.querySelector(".slider-wrapper .image-list");
     const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
@@ -56,3 +58,7 @@ const initSlider = () => {
 }
 
 window.addEventListener("load", initSlider)
+
+backButton.addEventListener("click", function() {
+    window.location.href = 'login.html';
+})
