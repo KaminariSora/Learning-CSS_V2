@@ -5,6 +5,7 @@
 }
 
 body {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,19 +20,19 @@ img {
 }
 
 header {
-    margin-bottom: 40px;
+    position: absolute;
+    top: 0;
 }
 
 .logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%,50%);
     height: 100px;
     width: auto;
 }
 
 .container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
     max-width: 1000px;
     width: 95%;
 }
