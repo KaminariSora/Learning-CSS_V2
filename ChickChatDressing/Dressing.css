@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #333;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    width: auto;
+    height: 100px;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid aqua;
+    width: 90%;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    width: 100%;
+}
+
+.button-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button-left button {
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    border-radius: 50%;
+}
+
+.dressing {
+    display: flex;
+    flex-direction: column;
+}
+
+.dressing img{
+    height: 400px;
+    width: auto;
+}
+
+.input-box {
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    background: #fff;
+    width: 400px;
+}
+
+ul li {
+    display: block;
+    position: relative;
+}
+
+ul li p {
+    display: block;
+    padding: 10px;
+}
+
+ul.dropdown li {
+    display: block;
+}
+
+ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+    background-color: #fff;
+}
+
+/* .menu {
+    list-style: none;
+    background: #fff;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.menu-item p {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background-color: #fff;
+}
+
+.menu-item:hover .dropdown {
+    display: block;
+} */
+
+
+p i {
+    position: absolute;
+    right: 10px;
+}
+
+div .description {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+}
+
+div .description input{
+    flex: 1;
+    min-width: 100px;
+    width: 200%;
+    height: 200px;
+}
+
+div .description label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
