@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="Dressing.css">
     <script src="https://kit.fontawesome.com/26997adfb2.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <img src="image/IMG_1012.PNG" class="logo">
@@ -30,40 +32,83 @@
                 <form action="#">
                     <div class="input-box">
                         <ul>
-                            <li>
+                            <li class="menu-item">
                                 <p>Tag<i class="fa-solid fa-caret-down"></i></p>
                                 <ul class="dropdown">
-                                    <li><p>Tag-1</p></li>
-                                    <li><p>Tag-2</p></li>
-                                    <li><p>Tag-3</p></li>
-                                    <li><p>Tag-4</p></li>
-                                    <li><p>Tag-5</p></li>
+                                    <li>
+                                        <p>Tag-1</p>
+                                    </li>
+                                    <li>
+                                        <p>Tag-2</p>
+                                    </li>
+                                    <li>
+                                        <p>Tag-3</p>
+                                    </li>
+                                    <li>
+                                        <p>Tag-4</p>
+                                    </li>
+                                    <li>
+                                        <p>Tag-5</p>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                     <div class="input-box">
                         <ul>
-                            <li>
+                            <li class="menu-item">
                                 <p>Tag<i class="fa-solid fa-caret-down"></i></p>
                                 <ul class="dropdown">
-                                    <li><p>Tag-1</p></li>
-                                    <li><p>Tag-2</p></li>
-                                    <li><p>Tag-3</p></li>
-                                    <li><p>Tag-4</p></li>
-                                    <li><p>Tag-5</p></li>
+                                    <li>
+                                        <p>Tag-1</p>
+                                    </li>
+                                    <li>
+                                        <p>Tag-2</p>
+                                    </li>
+                                    <li>
+                                        <p>Tag-3</p>
+                                    </li>
+                                    <li>
+                                        <p>Tag-4</p>
+                                    </li>
+                                    <li>
+                                        <p>Tag-5</p>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                     <div class="input-box description">
-                        <input type="text" required>
-                        <label>Description</label>
+                        <textarea id="message" name="message" rows="8" required></textarea>
+                        <label for="message">Description</label>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    
+
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".menu-item").click(function () {
+            $(this).find(".dropdown").toggle();
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        menuItems.forEach(function (menuItem) {
+            menuItem.addEventListener('click', function () {
+                const icon = this.querySelector('.fa-solid');
+                icon.classList.toggle('fa-caret-down');
+                icon.classList.toggle('fa-caret-up');
+            });
+        });
+    });
+
+</script>
+
 </html>

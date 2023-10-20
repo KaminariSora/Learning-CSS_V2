@@ -1,3 +1,8 @@
+:root {
+    --background-color: rgba(244,211,94) ;
+    --box-color: rgba(217,217,217);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -6,7 +11,7 @@
 
 body {
     height: 100vh;
-    background: #333;
+    background: var(--background-color);
 }
 
 header {
@@ -26,7 +31,7 @@ header {
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    border: 2px solid aqua;
+    /* border: 2px solid aqua; */
     width: 90%;
 }
 
@@ -47,10 +52,14 @@ header {
 }
 
 .button-left button {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     margin: 20px;
     border-radius: 50%;
+    background: var(--box-color);
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .dressing {
@@ -69,8 +78,14 @@ header {
 
 ul {
     list-style: none;
-    background: #fff;
+    background: var(--box-color);
     width: 400px;
+    font-size: 1.2rem;
+}
+
+li:hover {
+    background-color: yellow;
+    cursor: pointer;
 }
 
 ul li {
@@ -94,45 +109,9 @@ ul.dropdown {
     display: none;
 }
 
-ul li:hover ul.dropdown {
-    display: block;
-    background-color: #fff;
+ul.dropdown li:hover {
+    background: #333;
 }
-
-/* .menu {
-    list-style: none;
-    background: #fff;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.menu-item p {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.dropdown {
-    width: 100%;
-    position: absolute;
-    z-index: 999;
-    display: none;
-    background-color: #fff;
-}
-
-.menu-item:hover .dropdown {
-    display: block;
-} */
-
 
 p i {
     position: absolute;
@@ -145,18 +124,27 @@ div .description {
     position: relative;
     width: 200px;
     height: 200px;
-    background-color: aqua;
-}
-
-div .description input{
-    flex: 1;
-    min-width: 100px;
-    width: 200%;
-    height: 200px;
 }
 
 div .description label {
     position: absolute;
     left: 10px;
     top: 10px;
+    font-size: 1.2rem;
+    transition: .5s ease;
+}
+
+textarea {
+    width: 400px;
+    height: 200px;
+    padding: 10px;
+    outline: 0;
+    border: none;
+    background: var(--box-color);
+}
+
+textarea:focus~label,
+textarea:valid~label {
+    top: -15px;
+    font-size: 14px;
 }
