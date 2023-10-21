@@ -67,6 +67,12 @@ header {
     font-weight: bold;
 }
 
+.button-left .face:hover,
+.button-left .clothes:hover {
+    background: yellow;
+    cursor: pointer;
+}
+
 .dressing {
     position: relative;
     display: flex;

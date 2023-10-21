@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    img {
+        width: 400px;
+        height: 400px;
+    }
+</style>
+
+<body>
+    <img id="image" src="img/IMG_0991.PNG" alt="Default Image">
+    <button class="change-image">Change Image</button>
+
+</body>
+
+<script>
+    const changeImageButton = document.querySelector('.change-image');
+    const imageElement = document.getElementById('image');
+
+    changeImageButton.addEventListener('click', function () {
+        imageElement.src = 'img/IMG_0992.PNG';
+    });
+
+</script>
+
+</html>

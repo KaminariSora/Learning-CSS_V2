@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Image/IMG_1012.PNG" type="image/x-icon">
     <title>Dressing Page</title>
     <link rel="stylesheet" href="Dressing.css">
     <script src="https://kit.fontawesome.com/26997adfb2.js" crossorigin="anonymous"></script>
@@ -16,8 +17,8 @@
     <div class="container">
         <div class="wrapper">
             <div class="button-left">
-                <button>face</button>
-                <button>clothes</button>
+                <button class="face">face</button>
+                <button class="clothes">clothes</button>
             </div>
             <div class="dressing">
                 <img src="image/Dressing.PNG" class="img-dressing">
@@ -92,6 +93,9 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+    const faceBtn = document.querySelector('.face');
+    const clothesBtn = document.querySelector('.clothes');
+
     const tagText = document.querySelector(".menu-item > p");
     const tagItems = document.querySelectorAll(".tag");
 
@@ -99,6 +103,14 @@
     const tagItems2 = document.querySelectorAll(".tag-2");
 
     const confirm = document.querySelector(".confirm");
+
+    faceBtn.addEventListener('click', () => {
+        window.location.href = 'face.html';
+    })
+
+    clothesBtn.addEventListener('click', () => {
+        window.location.href = 'clothes.html';
+    })
 
     tagItems.forEach(tagItem => {
         tagItem.addEventListener("click", function () {
