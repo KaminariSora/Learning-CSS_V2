@@ -24,15 +24,22 @@
 <body>
     <img id="image" src="img/IMG_0991.PNG" alt="Default Image">
     <button class="change-image">Change Image</button>
-
 </body>
 
 <script>
     const changeImageButton = document.querySelector('.change-image');
     const imageElement = document.getElementById('image');
+    const imgSource = [
+        'img/IMG_0992.PNG',
+        'img/IMG_0993.PNG',
+        'img/IMG_0994.PNG'
+    ]
+
+    let currentImageIndex = 0;
 
     changeImageButton.addEventListener('click', function () {
-        imageElement.src = 'img/IMG_0992.PNG';
+        currentImageIndex = (currentImageIndex + 1) % imgSource.length;
+        imageElement.src = imgSource[currentImageIndex];
     });
 
 </script>
