@@ -50,10 +50,17 @@ header {
 }
 
 .button-left {
+    position: absolute;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.tag-description {
+    position: absolute;
+    right: 0;
 }
 
 .button-left button {
@@ -75,6 +82,8 @@ header {
 
 .dressing {
     position: relative;
+    left: -10%;
+    top: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -211,4 +220,36 @@ textarea:valid~label {
 
 .confirm:hover {
     background: yellow;
+}
+
+@media only screen and (max-width: 1000px){
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dressing {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+    }
+
+    .button-left {
+        position: relative;
+        top: 40%;
+        left: -30%;
+    }
+
+    .tag-description {
+        position: absolute;
+        top: 73%;
+    }
+
+    .confirm {
+        position: absolute;
+        right: 0;
+        bottom: -13%;
+        margin: 0;
+    }
 }
