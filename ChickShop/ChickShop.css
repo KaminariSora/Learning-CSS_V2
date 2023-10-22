@@ -1,0 +1,68 @@
+:root {
+    --background-color: rgba(244,211,94) ;
+    --base-color: rgba(238, 150, 075);
+    --box-color: rgba(217,217,217);
+    --shadow: 10px 5px 20px black;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: var(--background-color);
+    height: 100vh;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    width: auto;
+    height: 100px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(200px,400px) auto;
+    height: auto;
+    margin-top: 120px;
+    border: 5px solid red;
+}
+
+.container div {
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.container .selection {
+    /* height: 100%; */
+}
+
+.container .shop-zone {
+    min-width: 400px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.item {
+    background: var(--base-color);
+    width: auto;
+    height: 100px;
+    object-fit: contain;
+}
+
+.item img {
+    width: 100px;
+    object-fit: cover;
+}
