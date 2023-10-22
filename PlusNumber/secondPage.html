@@ -1,19 +1,21 @@
 <!-- second_page.html -->
 <html>
+
 <body>
-  <div id="result"></div>
+    <div id="result"></div>
 
-  <script>
-    // Retrieve the number from localStorage
-    const userNumber = localStorage.getItem('userNumber');
+    <script>
+        // Retrieve the number from localStorage
+        const userNumber = localStorage.getItem('userNumber');
 
-    if (userNumber) {
-      // You can perform any desired operation here, e.g., add 10 to the number
-      const resultNumber = parseFloat(userNumber) + 10;
-      document.getElementById('result').textContent = `Result: ${resultNumber}`;
-    } else {
-      document.getElementById('result').textContent = 'No number found.';
-    }
-  </script>
+        if (userNumber) {
+            // You can perform any desired operation here, e.g., add 10 to the number
+            const resultNumber = parseFloat(userNumber) + 10;
+            document.getElementById('result').textContent = `Result: ${resultNumber}`;
+        } else {
+            document.getElementById('result').textContent = 'No number found.';
+        }
+    </script>
 </body>
+
 </html>
