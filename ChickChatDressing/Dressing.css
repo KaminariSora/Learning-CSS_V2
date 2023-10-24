@@ -276,3 +276,14 @@ textarea:valid~label {
         /* margin-top: 100px; */
     }
 }
+
+/* .pos {
+    position: relative;
+    border: 2px solid #333;
+}
+
+.face-1 {
+    height: 10px;
+    width: 10px;
+    position: absolute;
+} */
