@@ -16,52 +16,71 @@ body {
     background: var(--background-color);
 }
 
+.header-container {
+    /* position: fixed;
+    width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #333; */
+}
+
 header {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: var(--background-color);
+    z-index: 10;
 }
 
 .logo {
     width: auto;
     height: 100px;
+    /* margin: 10px; */
 }
 
 .container {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    /* border: 2px solid aqua; */
-    width: 90%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    /* background-color: aqua; */
 }
 
 .wrapper {
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100vh; 
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
     width: 100%;
+    /* border: 2px solid aqua; */
 }
 
 .input-box {
+    /* border: 2px solid #333; */
     margin: 20px;
 }
 
 .button-left {
-    position: absolute;
-    left: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    /* border: 2px solid #333; */
+    flex-grow: 0;
+    flex-shrink: 1;
+    /* margin-left: 150px; */
 }
 
 .tag-description {
-    position: absolute;
-    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: 100px; */
 }
 
 .button-left button {
@@ -85,14 +104,15 @@ header {
 }
 
 .dressing {
-    position: relative;
-    left: -10%;
-    top: 10px;
+    /* border: 2px solid #333; */
     display: flex;
     flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 1;
 }
 
 .dressing img{
+    display: flex;
     height: 400px;
     width: auto;
     pointer-events: none;
@@ -108,6 +128,7 @@ header {
 }
 
 .Name label {
+    display: flex;
     position: absolute;
     top: 30%;
     left: 50%;
@@ -118,6 +139,7 @@ header {
 }
 
 .Name input {
+    display: flex;
     border: none;
     width: 80%;
     height: 50px;
@@ -209,14 +231,15 @@ textarea:valid~label {
 }
 
 .confirm {
-    position: absolute;
-    right: 0;
-    bottom: 30px;
+    display: flex;
+    align-items: end;
+    justify-content: end;
     height: auto;
     width: auto;
-    font-size: 1.5em;
+    font-size: 3em;
     font-weight: bold;
     margin: 20px;
+    margin-left: 50%;
     padding: 10px;
     border: none;
     border-radius: 20px;
@@ -227,34 +250,29 @@ textarea:valid~label {
     background: yellow;
 }
 
-@media only screen and (max-width: 1000px){
-    .wrapper {
+@media only screen and (max-width: 800px) {
+    .button-left{
+        flex-direction: row;
+    }
+
+    /* .button-left {
         display: flex;
         flex-direction: column;
-    }
-
-    .dressing {
         position: absolute;
-        left: 50%;
-        top: 20%;
-        transform: translateX(-50%);
-    }
-
-    .button-left {
-        position: relative;
-        top: 40%;
-        left: -30%;
+        left: 0;
+        top: 90%;
     }
 
     .tag-description {
         position: absolute;
-        top: 73%;
-    }
-
-    .confirm {
-        position: absolute;
         right: 0;
-        bottom: -13%;
-        margin: 0;
+        top: 90%;
+    } */
+}
+
+@media only screen and (max-width: 1083px){
+    .wrapper{
+        position: relative;
+        /* margin-top: 100px; */
     }
 }

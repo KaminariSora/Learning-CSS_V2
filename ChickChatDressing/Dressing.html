@@ -11,11 +11,17 @@
 </head>
 
 <body>
-    <header>
-        <img src="image/IMG_1012.PNG" class="logo">
-    </header>
+    <div class="header-container">
+        <header>
+            <img src="image/IMG_1012.PNG" class="logo">
+        </header>
+    </div>
     <div class="container">
         <div class="wrapper">
+            <div class="button-left">
+                <button class="face">face</button>
+                <button class="clothes">clothes</button>
+            </div>
             <div class="dressing">
                 <img src="image/Dressing.PNG" class="img-dressing">
                 <form action="#">
@@ -24,10 +30,6 @@
                         <label>Enter your name <i class="fa-solid fa-pencil"></i></label>
                     </div>
                 </form>
-            </div>
-            <div class="button-left">
-                <button class="face">face</button>
-                <button class="clothes">clothes</button>
             </div>
             <div class="tag-description">
                 <form action="#">
@@ -83,10 +85,10 @@
                         <textarea id="message" name="message" rows="8" required></textarea>
                         <label for="message">Description</label>
                     </div>
+                    <button class="confirm">confirm</button>
                 </form>
             </div>
         </div>
-        <button class="confirm">confirm</button>
     </div>
 
 </body>
