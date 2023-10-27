@@ -72,12 +72,9 @@ header img {
     width: 400px;
     height: 400px;
     background-color: transparent;
-    /* margin-top: 90px; */
     margin-left: -45px;
     border-radius: 10px;
     transition: 0.2s;
-    /* position: absolute; */
-    border: 2px solid aqua;
     z-index: 20;
 }
 
