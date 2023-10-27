@@ -54,7 +54,7 @@ window.onload = function() {
     });
     face7 = document.getElementById('face7');
     face7.addEventListener('click', () => {
-        changeImage(face_list[0]);
+        changeImage(face_list[6]);
     });
     face8 = document.getElementById('face8');
     face8.addEventListener('click', () => {
@@ -62,7 +62,7 @@ window.onload = function() {
     });
     face9 = document.getElementById('face9');
     face9.addEventListener('click', () => {
-        changeImage(face_list[2]);
+        changeImage(face_list[1]);
     });
 };
 

@@ -63,11 +63,6 @@ header img {
     background: var(--box-color);
 }
 
-.lol {
-    /* background-color: black; */
-    /* border: 2px solid yellow; */
-}
-
 #charScreen {
     width: 400px;
     height: 400px;
