@@ -1,6 +1,7 @@
 :root {
     --background-color: rgba(244,211,94) ;
     --base-color: rgba(238, 150, 075);
+    --low-opacity-base-color: rgba(238, 150, 075, 0.5) ;
     --box-color: rgba(217,217,217);
     --shadow: 10px 5px 20px black;
 }
@@ -17,15 +18,38 @@ body {
 }
 
 header {
-    position: absolute;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
+    background: var(--background-color);
+    z-index: 1;
 }
 
 .logo {
     width: auto;
     height: 100px;
+}
+
+.chicken {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    height: 50px;
+    width: auto;
+    background: white;
+}
+
+.chicken img {
+    margin: 10px;
+    width: auto;
+    height: 50px;
 }
 
 .container {
@@ -38,7 +62,7 @@ header {
     justify-content: center;
     width: 90vw;
     height: 70%;
-    border: 5px solid red;
+    /* border: 5px solid red; */
 }
 
 .navbar {
@@ -58,18 +82,19 @@ header {
     width: 100%;
     height: 75px;
     border: none;
-    border-radius: 10px;
-    z-index: -1;
-    left: 10px;
+    border-radius: 100px 0px 0px 100px; 
 }
 
 .av-shop {
-    background-color: var(--base-color);
+    background: var(--base-color);
+}
+
+.chick {
+    background: rgba(238, 150, 075, 0.5);
 }
 
 .av-shop,
 .chick {
-    background: var(--base-color);
     font-size: 2rem;
 }
 
@@ -79,28 +104,111 @@ header {
 }
 
 .shop-zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-width: 400px;
     width: 100%;
     height: 100%;
-    border: 2px solid black;
     background: var(--box-color);
 }
 
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+    width: 95%;
+    height: 95%;
 }
 
 .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: var(--base-color);
-    width: auto;
-    height: 100px;
+    width: 100%;
+    height: 100%;
+    max-height: calc(100% - 10px); 
     border: 2px solid blue;
-    margin: 5px;
+    overflow: hidden;
+    /* margin: 5px; */
 }
 
 .item img {
-    width: 100px;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
+}
+
+.item:hover {
+    background: yellow;
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    bottom: 0px;
+    width: 100%;
+    height: 5rem;
+}
+
+.footer-container i {
+    margin: 20px;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 726px) {
+    .logo {
+        width: auto;
+        height: 50px;
+    }
+
+    .container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        width: 90vw;
+        height: 70%;
+        /* border: 5px solid red; */
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: auto;
+        /* border: 2px solid black; */
+    }
+
+    .navbar button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row !important;
+        width: 100%;
+        height: 75px;
+        border: none;
+        border-radius: 100px; 
+    }
+
+    footer {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        bottom: 0px;
+        width: 100%;
+        height: 5rem;
+    }
 }
