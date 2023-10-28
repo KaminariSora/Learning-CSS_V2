@@ -130,7 +130,7 @@ header {
     width: 100%;
     height: 100%;
     max-height: calc(100% - 10px); 
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     overflow: hidden;
     /* margin: 5px; */
 }
@@ -161,6 +161,25 @@ footer {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 375px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 160px) !important;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        width: 95%;
+        height: 95%;
+    }
+
+    .shop-zone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 320px !important;
+        background: var(--box-color);
+    }
+}
+
 @media only screen and (max-width: 726px) {
     .logo {
         width: auto;
@@ -176,7 +195,7 @@ footer {
         align-items: start;
         justify-content: center;
         flex-direction: column;
-        width: 90vw;
+        width: 100vw;
         height: 70%;
         /* border: 5px solid red; */
     }
@@ -202,6 +221,44 @@ footer {
         border-radius: 100px; 
     }
 
+    .shop-zone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        background: var(--box-color);
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+        width: 95%;
+        height: 95%;
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--base-color);
+        width: 100%;
+        height: 100%;
+        /* max-height: calc(100% - 10px);  */
+        /* border: 2px solid blue; */
+        overflow: hidden;
+        /* margin: 5px; */
+    }
+
+    .item img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
     footer {
         position: absolute;
         display: flex;
@@ -210,5 +267,10 @@ footer {
         bottom: 0px;
         width: 100%;
         height: 5rem;
+    }
+
+    .footer-container i {
+        font-size: 2rem;
+        cursor: pointer;
     }
 }

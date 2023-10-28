@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+    --background-color: rgba(244,211,94) ;
+    --base-color: rgba(238, 150, 075);
+    --low-opacity-base-color: rgba(238, 150, 075, 0.5) ;
+    --box-color: rgba(217,217,217);
+    --shadow: 10px 5px 20px black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background: var(--background-color);
+}
+
+/* div {
+    border: 2px solid black;
+} */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--background-color);
+}
+
+.header img {
+    height: 100px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: auto auto 300px;
+    width: 100vw;
+    /* height: 100vh; */
+    border: 5px solid red;
+}
+
+.card {
+    position: relative;
+    background: rgb(248, 126, 82);
+    background-size: cover;
+    padding: 25px;
+    border-radius: 28px;
+    max-width: 380px;
+    width: 100%;
+    height: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform .5s ease ;
+}
+
+.head,
+.logo,
+.ID {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    line-height: 15px;
+}
+
+.logo img {
+    width: 48px;
+    margin-right: 10px;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    /* border: 1px solid white; */
+}
+
+.head .chip {
+    width: 60px;
+}
+
+h6 {
+    color: black;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+h5.number {
+    margin-top: 4px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+h5.name {
+    margin-top: 20px;
+}
+
+.container .card-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    /* border: 2px solid aqua; */
+}
+
+.toe {
+    width: 70px;
+    height: 70px;
+}
+
+.logo-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ChickChat {
+    width: auto;
+    height: 50px;
+}
+
+.character {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.char-set {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.char-set a {
+    margin: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 2rem;
+}
+
+.charScreen {
+    display: flex;
+    max-width: 400px;
+    min-height: 400px;
+    border: 2px solid aqua;
+}
+
+.random {
+    position: relative;
+    height: 50px;
+    width: 50%;
+    border-radius: 20px;
+    background: var(--base-color);
+    font-size: 1.5rem;
+}
+
+.random i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.random:hover {
+    background: yellow;
+    box-shadow: var(--shadow);
+}
+
+.footer {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    /* background: var(--box-color); */
+}
+
+.icon-box {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 3rem;
+    /* border: 2px solid black; */
+}
+
+.icon-box i {
+    margin: 20px;
+}
+
+.help {
+    font-size: 3rem;
+    margin: 20px;
+}
+
+i:hover { 
+    color: var(--base-color);
+    box-shadow: inset 0px 0px 10px 2px black;
+}
+
+@media only screen and (max-width: 768px) {
+    .random i {
+        display: none;
+    }
+}
