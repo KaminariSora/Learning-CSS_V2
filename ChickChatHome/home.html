@@ -65,7 +65,7 @@
             <button class="random">Random Chat <i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
     </div>
-    <!-- <div class="HowToUse">
+    <div class="HowToUse">
         <div class="container-HowToUse">
             <div class="slider-wrapper">
                 <button class="slide-button" id="prev-slide"><i class="fa-solid fa-arrow-left"></i></button>
@@ -83,7 +83,7 @@
                         <img src="Image/IMG_0993.PNG" alt="img-1" class="image-item">
                     </div>
                     <div>
-                        <img src="Image/IMG_0994.PNG" alt="img-1" class="image-item">
+                        <img src="Image/IMG_0996.PNG" alt="img-1" class="image-item">
                     </div>
                     <div>
                         <img src="Image/IMG_0995.PNG" alt="img-1" class="image-item">
@@ -97,18 +97,28 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <div class="footer">
         <div class="icon-box">
             <a href=""><i class="fa-solid fa-envelope"></i></a>
-            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="../ChickShop/chickShop.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
         <div class="help">
-            <a href=""><i class="fa-solid fa-circle-info"></i></a>
+            <button id="toggleButton"><i class="fa-solid fa-circle-info"></i></button>
         </div>
     </div>
     <script>
         const backButton = document.querySelector(".back");
+        const toggleButton = document.getElementById("toggleButton");
+        const containerHowToUse = document.querySelector(".HowToUse");
+
+        toggleButton.addEventListener('click', () => {
+            if(containerHowToUse.style.display === "none") {
+                containerHowToUse.style.display = "block";
+            } else {
+                containerHowToUse.style.display = "none";
+            }
+        })
 
         const initSlider = () => {
             const imageList = document.querySelector(".slider-wrapper .image-list");
