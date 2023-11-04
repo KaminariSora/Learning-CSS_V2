@@ -11,61 +11,65 @@
 </head>
 
 <body>
-    <header class="header">
-        <img src="image/IMG_1012.PNG" alt="">
-        <div class="chicken">
-            <p>${Number}</p>
-            <img src="image/IMG_0991.PNG" alt="">
-        </div>
-    </header>
     <div class="container">
-        <div class="card">
-            <header class="head">
-                <span class="logo">
-                    <img src="image/IMG_0991.PNG" alt="" />
-                    <h5>บัตรประจำตัวประชากรchick</h5>
-                    <h5>Chick National ID Card</h5>
-                    <br>
-                </span>
-            </header>
-            <span class="ID">
-                <h5>เลชประจำตัวชิค</h5>
-                <h5>${Number}</h5>
-            </span>
-            <span class="ID">
-                <h5>ชื่อ</h5>
-                <h5>${Name}</h5>
-            </span>
-            <span class="ID">
-                <h5>ประเภท</h5>
-                <h5>${Type}</h5>
-                <h5>ซอส</h5>
-                <h5>${Sources}</h5>
-            </span>
-            <div class="card-details">
-                <div class="name-number">
-                    <img src="image/Screenshot 2023-10-28 161027.png" class="toe">
-                </div>
-                <div class="valid-date">
-                    <h6>ตลอดชีพ</h6>
-                    <h6>วันหมดอายุ</h6>
-                    <h5>none</h5>
-                </div>
-                <div class="logo-img">
-                    <img src="image/IMG_1012.PNG" class="ChickChat">
+        <header class="header">
+            <img src="image/IMG_1012.PNG" alt="">
+            <div class="chicken">
+                <p>${Number}</p>
+                <img src="image/IMG_0991.PNG" alt="">
+            </div>
+        </header>
+        <div class="grid">
+            <div class="card-container">
+                <div class="card">
+                    <header class="head">
+                        <span class="logo">
+                            <img src="image/IMG_0991.PNG" alt="" />
+                            <h5>บัตรประจำตัวประชากรchick</h5>
+                            <h5>Chick National ID Card</h5>
+                            <br>
+                        </span>
+                    </header>
+                    <span class="ID">
+                        <h5>เลชประจำตัวชิค</h5>
+                        <h5>${Number}</h5>
+                    </span>
+                    <span class="ID">
+                        <h5>ชื่อ</h5>
+                        <h5>${Name}</h5>
+                    </span>
+                    <span class="ID">
+                        <h5>ประเภท</h5>
+                        <h5>${Type}</h5>
+                        <h5>ซอส</h5>
+                        <h5>${Sources}</h5>
+                    </span>
+                    <div class="card-details">
+                        <div class="name-number">
+                            <img src="image/Screenshot 2023-10-28 161027.png" class="toe">
+                        </div>
+                        <div class="valid-date">
+                            <h6>ตลอดชีพ</h6>
+                            <h6>วันหมดอายุ</h6>
+                            <h5>none</h5>
+                        </div>
+                        <div class="logo-img">
+                            <img src="image/IMG_1012.PNG" class="ChickChat">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="character">
-            <div class="char-set">
-                <img src="image/Dressing.PNG" style="display: none;" id="myImg" alt="">
-                <canvas class="charScreen"></canvas>
-                <a href="../ChickChatDressing/Dressing.html"><i class="fa-solid fa-pencil"></i></a>
+            <div class="character">
+                <div class="char-set">
+                    <!-- <img src="image/Dressing.PNG"  id="myImg" alt=""> -->
+                    <canvas class="charScreen"></canvas>
+                    <a href="../ChickChatDressing/Dressing.html"><i class="fa-solid fa-pencil"></i></a>
+                </div>
+                <button class="random">Random Chat <i class="fa-solid fa-arrows-rotate"></i></button>
             </div>
-            <button class="random">Random Chat <i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
     </div>
-    <div class="HowToUse">
+    <div class="HowToUse" style="display: none;">
         <div class="container-HowToUse">
             <div class="slider-wrapper">
                 <button class="slide-button" id="prev-slide"><i class="fa-solid fa-arrow-left"></i></button>
