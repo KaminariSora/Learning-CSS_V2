@@ -15,6 +15,7 @@
 body {
     background: var(--background-color);
     height: 100vh;
+    overflow: hidden;
 }
 
 header {
@@ -107,10 +108,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 400px;
+    min-width: 320px;
     width: 100%;
     height: 100%;
     background: var(--box-color);
+    /* overflow: hidden; */
 }
 
 .wrapper {
@@ -120,6 +122,7 @@ header {
     gap: 50px;
     width: 95%;
     height: 95%;
+    overflow: hidden;
 }
 
 .item {
@@ -177,6 +180,16 @@ footer {
         justify-content: center;
         max-width: 320px !important;
         background: var(--box-color);
+    }
+
+    .chicken {
+        font-size: 0.5rem;
+        width: auto;
+        height: 20px;
+    }
+
+    .chicken img {
+        height: 20px;
     }
 }
 
