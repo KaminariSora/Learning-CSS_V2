@@ -45,6 +45,7 @@ header {
     height: 50px;
     width: auto;
     background: white;
+    border-radius: 20px;
 }
 
 .chicken img {
@@ -183,8 +184,7 @@ footer {
     }
 
     .chicken {
-        font-size: 0.5rem;
-        width: auto;
+        width: 60px !important;
         height: 20px;
     }
 
@@ -193,10 +193,28 @@ footer {
     }
 }
 
+@media (min-width: 490px) and (max-width: 725px) {
+    .chicken img {
+        display: block !important;
+    }
+}
+
 @media only screen and (max-width: 726px) {
     .logo {
         width: auto;
         height: 50px;
+    }
+
+    .chicken {
+        font-size: 0.8rem;
+        height: auto;
+        width: auto;
+        padding: 0px;
+    }
+
+    .chicken img {
+        display: none;
+        margin: 0;
     }
 
     .container {

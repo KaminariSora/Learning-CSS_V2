@@ -55,16 +55,15 @@ a {
 .banner {
     display: flex;
     justify-content: center;
-    /* min-height: 100px; */
     max-height: 100px;
-    margin-right: auto;
-    margin-left: auto;
-    /* border: 2px solid red; */
+    margin-right: 500px auto;
+    margin-left: 100px auto;
     object-fit: contain;
 }
 
 .inside-banner {
-    max-width: 100%;
+    width: auto;
+    height: 100px;
     /* max-height: 100px; */
 }
 
@@ -77,10 +76,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 1%;
-    background: white;
+    position: absolute;
+    right: 20px;
     height: 50px;
-    padding: 5px;
+    width: auto;
+    background: white;
+    border-radius: 20px;
 }
 
 .grid {
@@ -197,7 +198,7 @@ h5.name {
     flex-direction: row;
     height: 100%;
     margin: 10px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 .char-set a {
@@ -216,7 +217,7 @@ h5.name {
     /* background: greenyellow; */
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid aqua;
+    /* border: 2px solid aqua; */
 }
 
 .random {
@@ -273,8 +274,6 @@ h5.name {
     margin: 20px auto;
 }
 
-
-
 .icon-box i:hover,
 .help i:hover {
     color: var(--base-color);
@@ -291,6 +290,7 @@ h5.name {
     height: 400px;
     background: white;
     box-shadow: inset 0px 0px 10px 2px black;
+    z-index: 200;
 }
 
 .container-HowToUse {
@@ -451,6 +451,30 @@ h5.name {
 
     .random i {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 447px) {
+    .card {
+      top: 80px;  
+      z-index: 100;
+    }
+}
+
+@media only screen and (max-width: 726px) {
+    .banner {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .chicken {
+        position: inherit;
+        /* margin: 0; */
+        right: 0 !important;
+    }
+
+    .inside-banner {
+        width: 50% !important;
     }
 }
 
