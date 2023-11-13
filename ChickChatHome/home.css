@@ -198,7 +198,7 @@ h5.name {
     flex-direction: row;
     height: 100%;
     margin: 10px;
-    /* border: 2px solid black; */
+    border: 2px solid black;
 }
 
 .char-set a {

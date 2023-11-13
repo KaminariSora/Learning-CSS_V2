@@ -46,6 +46,11 @@ header img {
     width: 100%;
 }
 
+.dressing {
+    position: relative;
+    border: 2px solid red;
+}
+
 .dressing img{
     min-width: 200px;
     min-height: 200px;
@@ -71,6 +76,7 @@ header img {
     border-radius: 10px;
     transition: 0.2s;
     z-index: 20;
+    border: 2px solid aqua;
 }
 
 .img {
@@ -131,4 +137,13 @@ footer {
         margin-top: 150px ;
     }
 
+}
+
+.box-test {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: #333;
 }

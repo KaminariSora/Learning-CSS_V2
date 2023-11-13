@@ -56,6 +56,8 @@ header {
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
+    margin-left: auto;
+    /* margin-right: auto; */
     /* border: 2px solid aqua; */
 }
 
@@ -73,6 +75,11 @@ header {
     flex-grow: 0;
     flex-shrink: 1;
     /* margin-left: 150px; */
+}
+
+.img-dressing {
+    width: 400px;
+    height: 400px;
 }
 
 .tag-description {

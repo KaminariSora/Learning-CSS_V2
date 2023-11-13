@@ -8,6 +8,8 @@ let face_list = [
     'face_avatar/Face7.PNG',
     'face_avatar/Face8.PNG',
     'face_avatar/Face9.PNG']
+
+let image = document.querySelector('.box-test');
     
 window.onload = function() {
     var myImage = document.getElementById("myImg");
@@ -31,6 +33,7 @@ window.onload = function() {
     face1 = document.getElementById('face1');
     face1.addEventListener('click', () => {
         changeImage(face_list[0]);
+        image.style.background = `red`;
     });
     face2 = document.getElementById('face2');
     face2.addEventListener('click', () => {
@@ -63,6 +66,7 @@ window.onload = function() {
     face9 = document.getElementById('face9');
     face9.addEventListener('click', () => {
         changeImage(face_list[1]);
+
     });
 };
 
