@@ -1,7 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+    --background-color: rgba(244, 211, 94);
+    --base-color: rgba(238, 150, 075);
+    --low-opacity-base-color: rgba(238, 150, 075, 0.5);
+    --box-color: rgba(217, 217, 217);
+    --shadow: 10px 5px 20px black;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -11,7 +22,11 @@ body {
     justify-content: center;
     min-height: 100vh;
     flex-direction: column;
-    background-color: rgba(244,211,94);
+    background: var(--background-color);
+    background-image: url('Image/IMG_1004\ \(1\).GIF');
+    background-size: cover; /* Adjust this as needed */
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 img {
@@ -35,6 +50,19 @@ header {
     transform: translateY(-40%);
     max-width: 1000px;
     width: 95%;
+    padding: 20px;
+}
+
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    /* background: #444; */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0);
+}
+
+.image-item {
+    border: 2px solid #333;
 }
 
 .slider-wrapper {
@@ -91,6 +119,11 @@ header {
 .subtitle {
     text-align: center;
     font-size: 32px;
+    background: var(--background-color);
+}
+
+.description {
+    background: var(--background-color);
 }
 
 .container .slider-scrollbar {
@@ -148,4 +181,9 @@ header {
     background: rgba(238,150,75);
     font-size: 1.5em;
     cursor: pointer;
+}
+
+.back:hover {
+    background: yellow;
+    box-shadow: var(--shadow);
 }

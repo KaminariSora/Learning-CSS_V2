@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+
 :root {
     --transition: transform .5s ease;
 }
@@ -6,6 +9,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -142,7 +146,7 @@ body {
 .input-box label {
     position: absolute;
     top: 30%;
-    left: 50px;
+    left: 60px;
     transform: translate(-50%);
     font-size: 1em;
     pointer-events: none;
@@ -152,7 +156,7 @@ body {
 .input-box label.confirm-pass {
     position: absolute;
     top: 30%;
-    left: 80px;
+    left: 90px;
     transform: translate(-50%);
     font-size: 1em;
     pointer-events: none;
