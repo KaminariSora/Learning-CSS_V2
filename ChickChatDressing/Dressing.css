@@ -14,6 +14,7 @@
 
 body {
     background: var(--background-color);
+    /* overflow: hidden; */
 }
 
 header {
@@ -51,6 +52,9 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* margin: 0; */
+    /* flex-shrink: 1; */
+    max-width: 100%;
     /* background: red; */
 }
 
@@ -89,13 +93,15 @@ header img {
     justify-content: center;
     flex-direction: column;
     /* background-color: aqua; */
-    min-width: 280px;
+    min-width: 320px;
+    max-height: 100%;
 }
 
 .img-dressing {
-    min-height: 200px;
     height: 90%;
     width: 90%;
+    max-width: 320px;
+    max-height: 320px;
     flex-grow: 10;
     flex-shrink: 10;
     flex-basis: 200px;
@@ -149,13 +155,18 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 100%;
+}
+
+.box-3 form {
+    max-width: 320px;
 }
 
 ul {
     list-style: none;
     background: var(--box-color);
-    min-width: 320px;
-    max-width: 400px;
+    min-width: 300px;
+    max-width: 320px;
     font-size: 1.2rem;
 }
 
@@ -185,6 +196,7 @@ ul.dropdown {
     z-index: 999;
     display: none;
     transition: .5s ease;
+    box-shadow: var(--shadow);
 }
 
 ul.dropdown li:hover {
@@ -214,7 +226,7 @@ p i {
 }
 
 textarea {
-    min-width: 320px;
+    min-width: 300px;
     max-width: 400px;
     height: 200px;
     padding: 10px;
@@ -235,7 +247,7 @@ textarea:valid~label {
     justify-content: end;
     height: auto;
     width: auto;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
     margin: 20px;
     margin-left: 50%;
