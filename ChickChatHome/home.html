@@ -63,8 +63,8 @@
             </div>
             <div class="character">
                 <div class="char-set">
-                    <!-- <img src="image/Dressing.PNG" class="charScreen" alt=""> -->
-                    <canvas class="charScreen"></canvas>
+                    <img src="image/Dressing.PNG" id="myImg" style="display: none;">
+                    <canvas id="charScreen"></canvas>
                     <a href="../ChickChatDressing/Dressing.html"><i class="fa-solid fa-pencil"></i></a>
                 </div>
                 <button class="random">Random Chat <i class="fa-solid fa-arrows-rotate"></i></button>
@@ -110,7 +110,7 @@
             <a href="../ChickShop/chickShop.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
         <div class="help">
-            <button id="toggleButton"><i class="fa-solid fa-circle-info"></i></button>
+            <button class="help-btn" id="toggleButton"><i class="fa-solid fa-circle-info"></i></button>
         </div>
     </div>
     <script>
@@ -185,6 +185,7 @@
 
         window.addEventListener("load", initSlider)
     </script>
+    <script src="home.js"></script>
 </body>
 
 </html>
