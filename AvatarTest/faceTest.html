@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Face</title>
+    <style>
+        .avatar-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            /* Adjust the width as needed */
+            height: 200px;
+            /* Adjust the height as needed */
+            border: 2px solid red;
+        }
+
+        .avatar-div {
+            flex-grow: 1;
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+        }
+
+        #faceDiv {
+            position: relative;
+            background-image: url('face/Face1.PNG');
+            /* Default face image */
+        }
+
+        #clothesDiv {
+            position: absolute;
+            left: 50%;
+            bottom: 10%;
+            transform: translate(-50%, 10%);
+            width: 50%;
+            height: 100px;
+            background-image: none;
+            /* Default clothes image */
+        }
+
+        select {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Choose Your Face</h1>
+
+    <!-- Face options and form go here -->
+    <select id="faceSelect" onchange="changeFace()">
+        <option value="face/Face1.PNG">Face 1</option>
+        <option value="face/Face2.PNG">Face 2</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <button onclick="applyFace()">Apply Face</button>
+
+    <div class="avatar-container">
+        <div id="faceDiv" class="avatar-div">
+            <!-- Face content goes here -->
+        </div>
+        <div id="clothesDiv" class="avatar-div">
+            <!-- Clothes content goes here -->
+        </div>
+    </div>
+
+    <script>
+        var selectedFace = localStorage.getItem("selectedFace");
+
+        if (!selectedFace) {
+            selectedFace = 'Default_avatar/Dressing.PNG';
+        }
+        document.getElementById("faceDiv").style.backgroundImage = "url('" + selectedFace + "')";
+
+        var selectedClothes = localStorage.getItem("selectedClothes");
+        document.getElementById("clothesDiv").style.backgroundImage = "url('" + selectedClothes + "')";
+
+        function changeFace() {
+            var faceSelect = document.getElementById("faceSelect");
+            var faceDiv = document.getElementById("faceDiv");
+            faceDiv.style.backgroundImage = "url('" + faceSelect.value + "')";
+        }
+
+        function applyFace() {
+            var faceSelect = document.getElementById("faceSelect");
+            // Save the selected face and navigate to the clothes page
+            localStorage.setItem("selectedFace", faceSelect.value);
+            window.location.href = "clothesTest.html";
+        }
+    </script>
+
+</body>
+
+</html>

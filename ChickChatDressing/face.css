@@ -48,7 +48,7 @@ header img {
 
 .dressing {
     position: relative;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .dressing img{
@@ -59,24 +59,47 @@ header img {
 
 .face-box {
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-template-rows: repeat(3,auto);
-    /* min-width: 200px;
-    min-height: 500px; */
+    min-width: 320px;
     width: auto;
     height: auto;
     background: var(--box-color);
 }
 
-#charScreen {
-    width: 400px;
+.avatar-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    min-width: 320px;
+    max-width: 400px;
     height: 400px;
-    background-color: transparent;
-    margin-left: -45px;
-    border-radius: 10px;
-    transition: 0.2s;
-    z-index: 20;
-    border: 2px solid aqua;
+}
+
+.avatar-div {
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+
+#faceDiv {
+    position: relative;
+    background-image: url('image/Dressing.PNG');
+}
+
+#clothesDiv {
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+    transform: translate(-50%, 10%);
+    width: 60%;
+    height: 25%;
+    background-image: none;
 }
 
 .img {
@@ -132,18 +155,19 @@ footer {
     height: 5rem;
 }
 
+@media (max-width: 451px) {
+    .wrapper {
+        margin-top: 350px ;
+    }
+
+    .face-box {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1px;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .container {
         margin-top: 150px ;
     }
-
-}
-
-.box-test {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    background: #333;
 }

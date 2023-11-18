@@ -8,7 +8,6 @@
     <link rel="icon" href="Image/IMG_1012.PNG" type="image/x-icon">
     <link rel="stylesheet" href="face.css">
     <script src="https://kit.fontawesome.com/26997adfb2.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -18,44 +17,49 @@
     <div class="wrapper">
         <div class="container">
             <div class="dressing">
-                <img src="image/Dressing.PNG" style="display: none;" id="myImg" alt="">
-                <canvas id="charScreen"></canvas>
-                <div class="box-test"></div>
-                <!-- <img src="image/Dressing.PNG" alt=""> -->
+                <!-- Avatar zone -->
+                <div class="avatar-container">
+                    <div id="faceDiv" class="avatar-div">
+                        <!-- Face content goes here -->
+                    </div>
+                    <div id="clothesDiv" class="avatar-div">
+                        <!-- Clothes content goes here -->
+                    </div>
+                </div>
             </div>
             <div class="face-box">
-                <button id="face1">
-                    <img src="face_avatar/Face1.PNG" class="img img-1" id="face1">
+                <button id="faceSelect1" data-image="face_avatar/Face1.PNG" onclick="changeFace(this)">
+                    <img src="face_avatar/Face1.PNG" class="img img-1" data-name="face 1">
                 </button>
-                <button id="face2">
-                    <img src="face_avatar/Face2.PNG" class="img img-2">
+                <button id="faceSelect2" data-image="face_avatar/Face2.PNG" onclick="changeFace(this)">
+                    <img src="face_avatar/Face2.PNG" class="img img-2" data-name="face 2">
                 </button>
-                <button id="face3">
-                    <img src="face_avatar/Face3.PNG" class="img img-3">
+                <button id="faceSelect3" data-image="face_avatar/Face3.PNG" onclick="changeFace(this)">
+                    <img src="face_avatar/Face3.PNG" class="img img-3" id="face" data-name="face 3" >
                 </button>
-                <button id="face4">
-                    <img src="face_avatar/Face4.PNG" class="img img-4">
+                <button id="faceSelect4" data-image="face_avatar/Face4.PNG" onclick="changeFace(this)">
+                    <img src="face_avatar/Face4.PNG" class="img img-4" id="face" data-name="face 4" >
                 </button>
-                <button id="face5">
-                    <img src="face_avatar/Face5.PNG" class="img img-5">
+                <button id="faceSelect5" data-image="face_avatar/Face5.PNG" onclick="changeFace(this)">
+                    <img src="face_avatar/Face5.PNG" class="img img-5" id="face" data-name="face 5" >
                 </button>
-                <button id="face6">
-                    <img src="face_avatar/Face6.PNG" class="img img-7">
+                <button id="faceSelect6" data-image="face_avatar/Face6.PNG" onclick="changeFace(this)">
+                    <img src="face_avatar/Face6.PNG" class="img img-7" id="face" data-name="face 6" >
                 </button>
-                <button id="face7">
-                    <img src="face_avatar/Face7.PNG" class="img img-8">
+                <button id="faceSelect7" data-image="face_avatar/Face7.PNG" onclick="changeFace(this)">
+                    <img src="face_avatar/Face7.PNG" class="img img-8" id="face" data-name="face 7" >
                 </button>
-                <button id="face8">
-                    <img src="face_avatar/Face1.PNG" class="img img-9">
+                <button id="faceSelect8" data-image="face_avatar/Face1.PNG" onclick="changeFace(this)">
+                    <img src="face_avatar/Face1.PNG" class="img img-9" id="face" data-name="face 1" >
                 </button>
-                <button id="face9">
-                    <img src="face_avatar/Face2.PNG" class="img img-6">
+                <button id="faceSelect9" data-image="face_avatar/Face2.PNG" onclick="changeFace(this)">
+                    <img src="face_avatar/Face2.PNG" class="img img-6" id="face" data-name="face 2" >
                 </button>
             </div>
         </div>
         <footer>
             <button class="shop"><i class="fa-solid fa-cart-shopping"></i></button>
-            <button class="save"><i class="fa-regular fa-floppy-disk"></i></button>
+            <button class="save" onclick="applyFace()"><i class="fa-regular fa-floppy-disk"></i></button>
         </footer>
     </div>
     <script src="face.js"></script>

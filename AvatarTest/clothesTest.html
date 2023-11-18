@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Clothes</title>
+    <style>
+        .avatar-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            /* Adjust the width as needed */
+            height: 200px;
+            /* Adjust the height as needed */
+            border: 2px solid red;
+        }
+
+        .avatar-div {
+            flex-grow: 1;
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+        }
+
+        #faceDiv {
+            position: relative;
+            background-image: url('Default_avatar/Dressing.PNG');
+            /* Default face image */
+        }
+
+        #clothesDiv {
+            position: absolute;
+            left: 50%;
+            bottom: 10%;
+            transform: translate(-50%, 10%);
+            width: 50%;
+            height: 100px;
+            background-image: none;
+            /* Default clothes image */
+        }
+
+        select {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Choose Your Clothes</h1>
+
+    <!-- Clothes options and form go here -->
+    <select id="clothesSelect" onchange="changeClothes()">
+        <option value="face/IMG_0985.PNG">Clothes 1</option>
+        <option value="face/IMG_0991.PNG">Clothes 2</option>
+        <!-- Add more options as needed -->
+    </select>
+
+    <button onclick="applyClothes(), changeClothes()">Apply Clothes</button>
+
+    <div class="avatar-container">
+        <div id="faceDiv" class="avatar-div">
+            <!-- Clothes content goes here -->
+        </div>
+        <div id="clothesDiv" class="avatar-div">
+            <!-- Clothes content goes here -->
+        </div>
+    </div>
+
+    <script>
+        var selectedFace = localStorage.getItem("selectedFace");
+        document.getElementById("faceDiv").style.backgroundImage = "url('" + selectedFace + "')";
+
+        var selectedClothes = localStorage.getItem("selectedClothes");
+        document.getElementById("clothesDiv").style.backgroundImage = "url('" + selectedClothes + "')";
+
+        function changeClothes() {
+            var clothesSelect = document.getElementById("clothesSelect");
+            var clothesDiv = document.getElementById("clothesDiv");
+            clothesDiv.style.backgroundImage = "url('" + clothesSelect.value + "')";
+        }
+
+        function applyClothes() {
+            var clothesSelect = document.getElementById("clothesSelect");
+            // Save the selected clothes and navigate back to the face page
+            localStorage.setItem("selectedClothes", clothesSelect.value);
+            window.location.href = "faceTest.html";
+        }
+    </script>
+
+</body>
+
+</html>

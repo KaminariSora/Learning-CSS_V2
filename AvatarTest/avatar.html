@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Avatar</title>
+    <style>
+        .avatar-container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            /* Adjust the width as needed */
+            height: 200px;
+            /* Adjust the height as needed */
+            border: 2px solid red;
+        }
+
+        .avatar-div {
+            flex-grow: 1;
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+        }
+
+        #faceDiv {
+            position: relative;
+            background-image: url('Default_avatar/Dressing.PNG');
+            /* Default face image */
+        }
+
+        #clothesDiv {
+            position: absolute;
+            left: 50%;
+            bottom: 10%;
+            transform: translate(-50%,10%);
+            width: 50%;
+            height: 100px;
+            background-image: none;
+            /* Default clothes image */
+        }
+
+        select {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>User Profile</h1>
+
+    <div>
+        <label>Change Face:</label>
+        <select id="faceSelect" onchange="changeFace()">
+            <option value="face/Face1.PNG">Face 1</option>
+            <option value="face/Face2.PNG">Face 2</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+
+    <div>
+        <label>Change Clothes:</label>
+        <select id="clothesSelect" onchange="changeClothes()">
+            <option value="face/IMG_0985.PNG">Clothes 1</option>
+            <option value="face/IMG_0991.PNG">Clothes 2</option>
+            <!-- Add more options as needed -->
+        </select>
+    </div>
+
+    <!-- Avatar Container -->
+    <div class="avatar-container">
+        <div id="faceDiv" class="avatar-div">
+            <!-- Face content goes here -->
+        </div>
+        <div id="clothesDiv" class="avatar-div">
+            <!-- Clothes content goes here -->
+        </div>
+    </div>
+
+    <script>
+        function changeFace() {
+            var faceSelect = document.getElementById("faceSelect");
+            var faceDiv = document.getElementById("faceDiv");
+            faceDiv.style.backgroundImage = "url('" + faceSelect.value + "')";
+        }
+
+        function changeClothes() {
+            var clothesSelect = document.getElementById("clothesSelect");
+            var clothesDiv = document.getElementById("clothesDiv");
+            clothesDiv.style.backgroundImage = "url('" + clothesSelect.value + "')";
+        }
+    </script>
+
+</body>
+
+</html>
