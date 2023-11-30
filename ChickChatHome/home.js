@@ -1,8 +1,7 @@
-window.onload = () => {
-    var avatar = document.getElementById('myImg');
-    var charScreen = document.getElementById("charScreen");
-    var charCtx = charScreen.getContext("2d");
-
-    charCtx.clearRect(0, 0, charScreen.width, charScreen.height);
-    charCtx.drawImage(avatar, 0, 0, charScreen.width, charScreen.height);
+var selectedFace = localStorage.getItem("selectedFace");
+var selectedClothes = localStorage.getItem("selectedClothes");
+if (!selectedFace) {
+    selectedFace = 'image/Dressing.PNG';
 }
+document.getElementById("faceDiv").style.backgroundImage = "url('" + selectedFace + "')";
+document.getElementById("clothesDiv").style.backgroundImage = "url('" + selectedClothes + "')";

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
 :root {
     --background-color: rgba(244, 211, 94);
@@ -186,8 +187,8 @@ h5.name {
     flex-direction: column;
     height: 50vh;
     min-width: auto;
-    border: 10px solid pink;
     transition: transform .5s ease;
+    /* border: 10px solid pink; */
 }
 
 .dressing {
@@ -237,27 +238,43 @@ h5.name {
     /* border: 2px solid #333; */
 }
 
+#pencil {
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    font-size: 2rem;
+}
+
+#pencil:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    color: var(--base-color);
+}
+
 .random {
     position: relative;
-    height: 50px;
-    width: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    height: auto;
+    width: 60%;
     border-radius: 20px;
     background: var(--base-color);
     font-size: 1.5rem;
-    overflow: hidden;
+    cursor: pointer;
+    /* overflow: hidden; */
 }
 
 .random i {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
+    position: relative;
+    right: 0px;
     pointer-events: none;
 }
 
 .random:hover {
     background: yellow;
     box-shadow: var(--shadow);
+    font-weight: bold;
 }
 
 .footer {
