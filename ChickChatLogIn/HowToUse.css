@@ -116,14 +116,15 @@ header {
     object-fit: cover; 
 }
 
+.slider-wrapper .image-list .Create_avatar .image-item {
+    width: 600px;
+    object-fit: contain;
+}
+
 .subtitle {
     text-align: center;
     font-size: 32px;
-    background: var(--background-color);
-}
-
-.description {
-    background: var(--background-color);
+    /* background: var(--background-color); */
 }
 
 .container .slider-scrollbar {
