@@ -125,11 +125,12 @@ header img {
 #clothesDiv {
     position: absolute;
     left: 50%;
-    bottom: 30%;
+    bottom: 27%;
     transform: translate(-50%, 10%);
-    width: 60%;
+    width: 65%;
     height: 25%;
     background-image: none;
+    /* border: 2px solid #333; */
 }
 
 .input-box {

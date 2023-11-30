@@ -31,19 +31,16 @@ header img {
 
 .wrapper {
     width: 100%;
-    height: 100%;
+    height: 100vh;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%,-50%);
     flex-wrap: wrap;
     width: 100%;
+    height: 80%;
 }
 
 .dressing {
@@ -95,11 +92,12 @@ header img {
 #clothesDiv {
     position: absolute;
     left: 50%;
-    bottom: 30%;
+    bottom: 27%;
     transform: translate(-50%, 10%);
-    width: 60%;
+    width: 65%;
     height: 25%;
     background-image: none;
+    /* border: 2px solid #333; */
 }
 
 .img {
@@ -157,17 +155,6 @@ footer {
 
 @media (max-width: 451px) {
     .wrapper {
-        margin-top: 350px ;
-    }
-
-    .face-box {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 1px;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .container {
-        margin-top: 150px ;
+        height: 200vh;
     }
 }

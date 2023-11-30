@@ -1,8 +1,10 @@
 var selectedFace = localStorage.getItem("selectedFace");
+var selectedClothes = localStorage.getItem("selectedClothes");
 if (!selectedFace) {
-    selectedFace = 'Default_avatar/Dressing.PNG';
+    selectedFace = 'image/Dressing.PNG';
 }
 document.getElementById("faceDiv").style.backgroundImage = "url('" + selectedFace + "')";
+document.getElementById("clothesDiv").style.backgroundImage = "url('" + selectedClothes + "')";
 console.log('data exist');
 
 function changeFace(button) {

@@ -186,36 +186,55 @@ h5.name {
     flex-direction: column;
     height: 50vh;
     min-width: auto;
-    /* border: 10px solid pink; */
+    border: 10px solid pink;
     transition: transform .5s ease;
 }
 
-.char-set {
+.dressing {
+    position: relative;
+    /* border: 2px solid red; */
+}
+
+.dressing img{
+    min-width: 200px;
+    min-height: 200px;
+    height: 100px;
+}
+
+.avatar-container {
     position: relative;
     display: flex;
-    align-items: end;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: space-between;
+    min-width: 320px;
+    max-width: 400px;
+    height: 400px;
+}
+
+.avatar-div {
+    flex-grow: 1;
+    background-size: cover;
+    background-position: center;
     height: 100%;
-    margin: 10px;
-}
-
-.char-set a {
-    position: absolute;
-    right: 0;
-    margin: 5px;
-    text-decoration: none;
-    color: #333;
-    font-size: 2rem;
-}
-
-#charScreen {
     display: flex;
-    /* max-width: min-content; */
-    width: 90%;
-    height: 100%;
-    /* background: #000; */
-    aspect-ratio: 3/2;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+
+#faceDiv {
+    position: relative;
+    background-image: url('image/Dressing.PNG');
+}
+
+#clothesDiv {
+    position: absolute;
+    left: 50%;
+    bottom: 27%;
+    transform: translate(-50%, 10%);
+    width: 65%;
+    height: 25%;
+    background-image: none;
+    /* border: 2px solid #333; */
 }
 
 .random {
