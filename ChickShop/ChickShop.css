@@ -106,7 +106,7 @@ header {
 }
 
 .shop-zone {
-    display: flex;
+    display: none !important;
     align-items: center;
     justify-content: center;
     min-width: 320px;
@@ -114,6 +114,14 @@ header {
     height: 100%;
     background: var(--box-color);
     /* overflow: hidden; */
+}
+
+.active {
+    display: flex !important;
+}
+
+.focus {
+    background-color: #DD6702;
 }
 
 .wrapper {
@@ -191,11 +199,27 @@ footer {
     .chicken img {
         height: 20px;
     }
+
+    .active {
+        display: flex;
+    }
+    
+    .focus {
+        background-color: #DD6702;
+    }
 }
 
 @media (min-width: 490px) and (max-width: 725px) {
     .chicken img {
         display: block !important;
+    }
+
+    .active {
+        display: flex;
+    }
+    
+    .focus {
+        background-color: #DD6702;
     }
 }
 
@@ -260,6 +284,14 @@ footer {
         width: 100%;
         height: 100%;
         background: var(--box-color);
+    }
+
+    .active {
+        display: flex;
+    }
+    
+    .focus {
+        background-color: #DD6702;
     }
 
     .wrapper {
