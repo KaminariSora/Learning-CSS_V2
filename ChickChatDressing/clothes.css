@@ -102,6 +102,7 @@ header img {
 
 .img {
     width: 150px;
+    /* height: 120px; */
     margin: auto;
 }
 
@@ -117,6 +118,18 @@ header img {
 
 .face-box button:hover {
     background: var(--base-color);
+}
+
+/* lock status */
+.clothes-item {
+    position: relative;
+}
+
+.lock {
+    position: absolute;
+    left: 28%;
+    top: 5%;
+    font-size: 5rem;
 }
 
 .shop {

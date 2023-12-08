@@ -101,6 +101,7 @@ header img {
 }
 
 .img {
+    /* position: absolute; */
     width: 150px;
     margin: auto;
 }
@@ -117,6 +118,18 @@ header img {
 
 .face-box button:hover {
     background: var(--base-color);
+}
+
+/* lock status */
+.face-item {
+    position: relative;
+}
+
+.lock {
+    position: absolute;
+    left: 28%;
+    top: 20%;
+    font-size: 5rem;
 }
 
 .shop {

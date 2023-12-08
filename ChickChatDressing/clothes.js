@@ -7,6 +7,16 @@ document.getElementById("faceDiv").style.backgroundImage = "url('" + selectedFac
 document.getElementById("clothesDiv").style.backgroundImage = "url('" + selectedClothes + "')";
 console.log('data exist');
 
+function checkStatus(button) {
+    const isButtonActive = !button.querySelector('.lock');
+
+    if(isButtonActive) {
+        changeClothes(button);
+    } else {
+        console.log("This item is locked.");
+    }
+}
+
 function changeClothes(button) {
     var clothesDiv = document.getElementById("clothesDiv");
     var allButtons = document.querySelectorAll("button[id^='clothesSelect']");
